@@ -1,0 +1,27 @@
+package com.in28minutes.springboot.learnspringboot;
+
+import java.util.Arrays;
+import java.util.List;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CourseController {
+
+    //courses
+    //courses : id, name, author
+    @RequestMapping("/courses")
+    public List<Course> retrieveAllCourses() {
+
+        return Arrays.asList(
+                new Course(1, "Learn AWS", "in28minutes"),
+                new Course(2, "Learn DevOps", "in28minutes"),
+                new Course(4, "Learn spring boot", "in28minutes"),
+                new Course(5, "Learn spring boot", "in28minutes"),
+                new Course(6, "Learn spring boot", "in28minutes")
+
+
+        );
+    }
+
+}
